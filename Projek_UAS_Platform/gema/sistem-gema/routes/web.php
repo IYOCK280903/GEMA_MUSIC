@@ -2,16 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/home', 'homepage');
-
 Route::get('/login', function () {
       return view('login');
 });
-
-Route::get('/signUp', function () {
-      return view('signUp');
-});
-
 
 
 
