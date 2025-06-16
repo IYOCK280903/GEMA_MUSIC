@@ -2,6 +2,7 @@
 // routes/web.php
 
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 // Halaman utama
@@ -25,8 +26,8 @@ Route::get('/signUp', function () {
 });
 
 // Halaman home (jika sudah login)
-Route::get('/home', function () {
-    return view('home');
+Route::get('/awal', function () {
+    return view('awal');
 });
 
 
