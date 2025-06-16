@@ -1,15 +1,32 @@
 <?php
+// routes/web.php
+
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/home', 'homepage');
-
-Route::get('/login', function () {
-      return view('login');
+// Halaman utama
+Route::get('/', function () {
+    return view('homepage');
 });
 
+// Halaman login
+Route::get('/login', function () {
+    return view('login');
+});
+
+// Halaman register (sign up)
+Route::get('/register', function () {
+    return view('register');
+});
+
+// Redirect /signUp ke /register agar tidak membingungkan
 Route::get('/signUp', function () {
-      return view('signUp');
+    return redirect('/register');
+});
+
+// Halaman home (jika sudah login)
+Route::get('/home', function () {
+    return view('home');
 });
 
 
